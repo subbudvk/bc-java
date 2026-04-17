@@ -242,7 +242,7 @@ public class CertificateFactory
             }
             else
             {
-                return readDERCertificate(new ASN1InputStream(pis));
+                return readDERCertificate(new ASN1InputStream(pis, 4 * 1024 * 1024));
             }
         }
         catch (Exception e)
@@ -348,7 +348,7 @@ public class CertificateFactory
             }
             else
             {       // lazy evaluate to help processing of large CRLs
-                return readDERCRL(new ASN1InputStream(pis, true));
+                return readDERCRL(new ASN1InputStream(pis, 32 * 1024 * 1024, true));
             }
         }
         catch (CRLException e)
