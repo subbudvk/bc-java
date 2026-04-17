@@ -23,6 +23,7 @@ public class RegressionTest
         new CertPathTest(),
         new CertPathValidatorTest(),
         new CertStoreTest(),
+        new BcSecurityTest(),
         new CertTest(),
         new CertUniqueIDTest(),
         new ChaCha20Poly1305Test(),
